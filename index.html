@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14532d">
+<title>VET-CIRCULAR | Semáforo veterinario</title>
+<style>
+:root{--green:#168447;--yellow:#d69e00;--red:#c93636;--ink:#183126;--muted:#5e7167;--paper:#f4f8f5}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{background:linear-gradient(135deg,#14532d,#15803d);color:#fff;padding:34px 20px 38px;text-align:center}
+header .tag{display:inline-block;border:1px solid #ffffff75;border-radius:99px;padding:5px 12px;font-size:.8rem;letter-spacing:.06em}
+h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.08;margin:16px auto 10px}
+header p{max-width:720px;margin:0 auto;color:#e6f5e9}
+main{max-width:980px;margin:0 auto;padding:24px 16px 48px}
+.intro,.note{background:white;border:1px solid #e0eae3;border-radius:16px;padding:20px;margin-bottom:20px;box-shadow:0 5px 18px #1831260a}
+h2{margin:0 0 10px;font-size:1.35rem}p{margin:8px 0}
+.signal{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}
+.card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e0eae3;box-shadow:0 5px 18px #1831260a}
+.cardhead{padding:18px;color:#fff;display:flex;align-items:center;gap:12px}
+.cardhead h2{margin:0;font-size:1.1rem}
+.light{width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px #ffffff35;flex:none}
+.green .cardhead{background:var(--green)}.yellow .cardhead{background:var(--yellow);color:#241c00}.yellow .light{background:#fff9d6}.red .cardhead{background:var(--red)}
+.cardbody{padding:18px}.cardbody ul{padding-left:20px;margin:8px 0}.cardbody li{margin:6px 0}
+.label{font-weight:750;display:block;margin-bottom:5px}
+.search{width:100%;padding:13px 15px;border:1px solid #cbd9ce;border-radius:12px;font:inherit;margin:8px 0 14px;background:#fff}
+.examples{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.example{background:#fff;border:1px solid #dfe9e2;border-radius:12px;padding:13px}
+.example b{display:block}.pill{font-size:.78rem;font-weight:750;border-radius:99px;padding:3px 9px;display:inline-block;margin-top:7px}
+.pill.g{background:#e0f3e7;color:#126536}.pill.y{background:#fff2c2;color:#765600}.pill.r{background:#fde4e4;color:#9b2424}
+.hidden{display:none}
+.notice{border-left:5px solid #d69e00;background:#fff9e5;padding:14px 16px;border-radius:8px;margin:18px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.step{background:#fff;border:1px solid #e0eae3;border-radius:12px;padding:14px}
+footer{text-align:center;color:var(--muted);padding:22px 16px;font-size:.9rem}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <span class="tag">PROYECTO AMBIENTAL · MEDICINA VETERINARIA</span>
+  <h1>VET-CIRCULAR</h1>
+  <p>Escanea, identifica y clasifica. Un semáforo para reducir el uso innecesario de plásticos sin comprometer la bioseguridad.</p>
+</header>
+<main>
+  <section class="intro">
+    <h2>¿Para qué sirve este semáforo?</h2>
+    <p>En las prácticas veterinarias se utilizan plásticos en procedimientos clínicos, laboratorio, limpieza y actividades académicas. No todos tienen el mismo nivel de necesidad sanitaria.</p>
+    <p>Este sistema ayuda a reconocer qué materiales se pueden <b>eliminar o sustituir</b>, cuáles se deben <b>reducir</b> y cuáles se deben <b>mantener</b> por razones de bioseguridad. Al escanear el QR, cada estudiante podrá identificar el material, conocer su categoría, entender el motivo de la clasificación y revisar cómo manejarlo después de utilizarlo.</p>
+  </section>
+
+  <section class="signal" aria-label="Categorías del semáforo">
+    <article class="card green">
+      <div class="cardhead"><span class="light"></span><h2>VERDE · SUSTITUIR O ELIMINAR</h2></div>
+      <div class="cardbody">
+        <p><b>¿Qué significa?</b> Materiales cuyo uso puede evitarse o reemplazarse por una alternativa segura, reutilizable o biodegradable.</p>
+        <span class="label">Ejemplos orientativos:</span>
+        <ul><li>Bolsas para transportar materiales limpios.</li><li>Envases de almacenamiento no contaminados.</li><li>Artículos desechables con una alternativa reutilizable validada.</li></ul>
+        <p><b>¿Por qué?</b> Porque pueden existir opciones reutilizables o con menos empaque que cumplan la misma función.</p>
+        <p><b>¿Cómo desecharlo?</b> Si está limpio y no contaminado, separar según el sistema de reciclaje institucional. Si está sucio o contaminado, seguir el protocolo correspondiente.</p>
+        <small>Antes de sustituir, comprobar que la alternativa sea adecuada para su función.</small>
+      </div>
+    </article>
+    <article class="card yellow">
+      <div class="cardhead"><span class="light"></span><h2>AMARILLO · REDUCIR</h2></div>
+      <div class="cardbody">
+        <p><b>¿Qué significa?</b> Materiales cuyo consumo puede disminuirse mediante planificación y uso eficiente.</p>
+        <span class="label">Ejemplos orientativos:</span>
+        <ul><li>Envolturas de materiales no estériles.</li><li>Bolsas de almacenamiento.</li><li>Envases y recipientes utilizados en exceso.</li></ul>
+        <p><b>¿Por qué?</b> Porque su consumo puede optimizarse sin afectar la actividad veterinaria.</p>
+        <p><b>¿Cómo desecharlo?</b> Cuando esté limpio y sea reciclable, colocarlo en el recipiente definido por la institución. Si tiene contaminación, aplicar el protocolo de residuos correspondiente.</p>
+        <small>Usar solo la cantidad necesaria y evitar abrir materiales antes de necesitarlos.</small>
+      </div>
+    </article>
+    <article class="card red">
+      <div class="cardhead"><span class="light"></span><h2>ROJO · MANTENER POR BIOSEGURIDAD</h2></div>
+      <div class="cardbody">
+        <p><b>¿Qué significa?</b> Materiales que deben mantenerse como descartables cuando son necesarios para prevenir contaminación y riesgos sanitarios.</p>
+        <span class="label">Ejemplos orientativos:</span>
+        <ul><li>Guantes desechables cuando el procedimiento los requiere.</li><li>Jeringas y agujas.</li><li>Catéteres y equipos de administración.</li><li>Material de laboratorio contaminado.</li></ul>
+        <p><b>¿Por qué?</b> Porque su reutilización o sustitución inadecuada puede provocar contaminación cruzada y riesgos para estudiantes, personal y animales.</p>
+        <p><b>¿Cómo desecharlo?</b> Separar inmediatamente según el tipo de residuo y el protocolo institucional. Los objetos cortopunzantes deben ir en un contenedor rígido autorizado; no deben depositarse sueltos en la basura común.</p>
+        <small>No reutilizar material descartable de uso clínico ni comprometer la esterilidad.</small>
+      </div>
+    </article>
+  </section>
+
+  <section class="intro" style="margin-top:22px">
+    <h2>Busca un material</h2>
+    <p>Escribe el nombre de un plástico para encontrar ejemplos de clasificación.</p>
+    <input class="search" id="search" type="search" placeholder="Ej.: guantes, bolsa, jeringa..." aria-label="Buscar material">
+    <div class="examples" id="examples">
+      <div class="example" data-terms="bolsa transporte limpia"><b>Bolsa para transportar materiales limpios</b><span>Verde: puede sustituirse por una bolsa reutilizable si la actividad lo permite. Si está limpia, separar para reciclaje cuando el sistema local la acepte; si está contaminada, seguir el protocolo institucional.</span><br><span class="pill g">VERDE · Sustituir o eliminar</span></div>
+      <div class="example" data-terms="envase recipiente almacenamiento limpio"><b>Envase de almacenamiento limpio</b><span>Verde: valorar un envase durable y reutilizable. Si el envase usado está limpio y es aceptado por el reciclaje local, separarlo según las indicaciones institucionales.</span><br><span class="pill g">VERDE · Sustituir o eliminar</span></div>
+      <div class="example" data-terms="envoltura empaque material no esteril"><b>Envoltura de material no estéril</b><span>Amarillo: evitar empaques duplicados y abrir solo lo necesario. Desechar o reciclar únicamente si está limpia y el sistema institucional lo permite.</span><br><span class="pill y">AMARILLO · Reducir</span></div>
+      <div class="example" data-terms="bolsa almacenamiento"><b>Bolsa de almacenamiento</b><span>Amarillo: planificar las cantidades para evitar desperdicio. Si está limpia, revisar si puede reciclarse según las reglas locales.</span><br><span class="pill y">AMARILLO · Reducir</span></div>
+      <div class="example" data-terms="guantes contaminados clinicos"><b>Guantes desechables</b><span>Rojo: mantener cuando el procedimiento los requiere. Desechar según el tipo de contaminación y el protocolo de residuos de la Facultad; no reciclar guantes contaminados.</span><br><span class="pill r">ROJO · Mantener</span></div>
+      <div class="example" data-terms="jeringa aguja"><b>Jeringas y agujas</b><span>Rojo: mantener como descartables cuando son necesarias. Depositar inmediatamente los cortopunzantes en el contenedor rígido autorizado; nunca reciclar ni colocar agujas sueltas en la basura común.</span><br><span class="pill r">ROJO · Mantener</span></div>
+      <div class="example" data-terms="cateter equipo administracion"><b>Catéteres y equipos de administración</b><span>Rojo: mantener descartables cuando el protocolo lo exige. Después de su uso, separar según el tipo de contaminación y las normas institucionales.</span><br><span class="pill r">ROJO · Mantener</span></div>
+      <div class="example" data-terms="laboratorio contaminado tubo placa punta"><b>Material de laboratorio contaminado</b><span>Rojo: mantener el manejo descartable indicado. Depositar en el recipiente asignado al residuo biológico o infeccioso, según el protocolo del laboratorio.</span><br><span class="pill r">ROJO · Mantener</span></div>
+    </div>
+    <p id="noresults" class="hidden"><b>No encontramos ese material.</b> Consulta con el responsable del área antes de clasificarlo.</p>
+  </section>
+
+  <section class="note">
+    <h2>¿Cómo clasificar correctamente?</h2>
+    <div class="steps">
+      <div class="step"><b>1. Identifica</b><p>Reconoce el material y para qué se utiliza.</p></div>
+      <div class="step"><b>2. Evalúa</b><p>Verifica si está contaminado, si requiere esterilidad y qué función cumple.</p></div>
+      <div class="step"><b>3. Clasifica</b><p>Asigna verde, amarillo o rojo según su posibilidad de sustitución, reducción o permanencia.</p></div>
+      <div class="step"><b>4. Actúa con seguridad</b><p>Aplica la alternativa o disposición autorizada por los protocolos de la Facultad.</p></div>
+    </div>
+    <div class="notice"><b>¡Importante!</b> El color del semáforo no indica el recipiente donde se deposita el residuo. La segregación y disposición final deben seguir las normas de residuos y bioseguridad de la Facultad. Nunca reutilices agujas, jeringas u otros materiales clínicos descartables.</div>
+  </section>
+
+  <section class="intro">
+    <h2>¿Cuánto plástico hemos logrado reducir?</h2>
+    <p>Registra el peso de plástico generado antes y después de aplicar las medidas del proyecto. El cálculo se realiza con los datos que ingrese el equipo; no son cifras predeterminadas.</p>
+    <div class="steps">
+      <div class="step"><label for="initial"><b>Consumo inicial (kg)</b></label><input class="search" id="initial" type="number" min="0" step="0.01" placeholder="Ej.: 12.50"></div>
+      <div class="step"><label for="final"><b>Consumo después (kg)</b></label><input class="search" id="final" type="number" min="0" step="0.01" placeholder="Ej.: 9.20"></div>
+    </div>
+    <button id="calculate" type="button" style="background:#166534;color:white;border:0;border-radius:10px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer">Calcular reducción</button>
+    <div id="result" class="notice" aria-live="polite">Ingresa ambos valores para conocer los kilogramos y el porcentaje de reducción.</div>
+    <small>Fórmula: (consumo inicial − consumo final) ÷ consumo inicial × 100. Utiliza el mismo período y las mismas áreas para que la comparación sea válida.</small>
+  </section>
+
+  <section class="intro">
+    <h2>¿Qué busca VET-CIRCULAR?</h2>
+    <ul>
+      <li>Reducir el consumo innecesario de materiales plásticos.</li>
+      <li>Identificar materiales que pueden sustituirse.</li>
+      <li>Mejorar la gestión de residuos en la Facultad.</li>
+      <li>Promover hábitos sostenibles sin comprometer la bioseguridad.</li>
+    </ul>
+    <p><b>ODS relacionados:</b> ODS 12 – Producción y consumo responsables; ODS 13 – Acción por el clima; y ODS 4 – Educación de calidad.</p>
+  </section>
+  <footer>VET-CIRCULAR · Facultad de Ciencias Agropecuarias · Carrera de Medicina Veterinaria<br><small>Clasificación educativa orientativa. La decisión final debe validarse con el docente tutor y los protocolos institucionales.</small></footer>
+</main>
+<script>
+const input=document.getElementById('search');
+const cards=[...document.querySelectorAll('.example')];
+const noresults=document.getElementById('noresults');
+input.addEventListener('input',()=>{
+ const q=input.value.trim().toLocaleLowerCase('es');
+ let count=0;
+ cards.forEach(card=>{
+   const match=!q || (card.innerText+' '+card.dataset.terms).toLocaleLowerCase('es').includes(q);
+   card.classList.toggle('hidden',!match); if(match) count++;
+ });
+ noresults.classList.toggle('hidden',count!==0);
+});
+document.getElementById('calculate').addEventListener('click',()=>{
+ const before=Number(document.getElementById('initial').value);
+ const after=Number(document.getElementById('final').value);
+ const out=document.getElementById('result');
+ if(document.getElementById('initial').value==='' || document.getElementById('final').value==='' || before<=0 || after<0){
+   out.textContent='Ingresa un consumo inicial mayor que cero y un consumo final igual o mayor que cero.';
+   return;
+ }
+ const kg=before-after, pct=(kg/before)*100;
+ if(kg<0){
+   out.textContent=`El consumo aumentó ${Math.abs(kg).toFixed(2)} kg (${Math.abs(pct).toFixed(1)}%). Revisa qué materiales generaron el incremento.`;
+ } else {
+   out.textContent=`Reducción registrada: ${kg.toFixed(2)} kg (${pct.toFixed(1)}%). ${kg===0?'El consumo se mantuvo igual.':'¡Buen trabajo! Continúen aplicando las medidas seguras de reducción.'}`;
+ }
+});
+</script>
+</body>
+</html>
